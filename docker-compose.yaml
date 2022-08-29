@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  go-jupyter:
+    build:
+      context: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - type: "bind"
+        source: ./studies
+        target: /studies
